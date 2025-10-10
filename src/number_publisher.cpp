@@ -13,7 +13,7 @@ public:
   {
     publisher_ = this->create_publisher<example_interfaces::msg::Int64>("/number", 10);
     timer_ = this->create_wall_timer(1s, std::bind(&NumberPublisher::timer_callback, this));
-    RCLCPP_INFO(this->get_logger(), "Publisher iniciado!");
+    RCLCPP_INFO(this->get_logger(), "Publisher deu certo");
   }
 
 private:
