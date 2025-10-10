@@ -12,7 +12,7 @@ public:
 
         publisher_ = this->create_publisher<example_interfaces::msg::Int64>("number_count", 10);
 
-        RCLCPP_INFO(this->get_logger(), "Nó 'number_counter' iniciado.");
+        RCLCPP_INFO(this->get_logger(), "Nó 'number_counter' iniciado");
     }
 
 private:
@@ -25,7 +25,7 @@ private:
 
         publisher_->publish(new_msg);
 
-        RCLCPP_INFO(this->get_logger(), "Recebido: %ld, contador = %ld", msg->data, counter_);
+        RCLCPP_INFO(this->get_logger(), "Recebendo: %ld, contador = %ld", msg->data, counter_);
     }
 
     rclcpp::Subscription<example_interfaces::msg::Int64>::SharedPtr subscriber_;
