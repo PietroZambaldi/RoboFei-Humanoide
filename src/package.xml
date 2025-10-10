@@ -5,9 +5,7 @@
   <description>Pacote ROS2 com publisher e subscriber para a atividade do contador.</description>
   <maintainer email="pietr@example.com">Pietr</maintainer>
   <license>Apache-2.0</license>
-
   <buildtool_depend>ament_cmake</buildtool_depend>
-
   <build_depend>rclcpp</build_depend>
   <build_depend>example_interfaces</build_depend>
 
