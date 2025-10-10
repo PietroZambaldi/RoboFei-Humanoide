@@ -1,7 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 project(my_package)
 
-# usar C++17
 if(NOT CMAKE_CXX_STANDARD)
   set(CMAKE_CXX_STANDARD 17)
 endif()
@@ -10,15 +9,11 @@ find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(example_interfaces REQUIRED)
 
-# executável 1: number_publisher
 add_executable(number_publisher src/number_publisher.cpp)
 ament_target_dependencies(number_publisher rclcpp example_interfaces)
 
-# executável 2: number_counter
 add_executable(number_counter src/number_counter.cpp)
 ament_target_dependencies(number_counter rclcpp example_interfaces)
-
-# instalar para poder rodar com ros2 run
 install(TARGETS
   number_publisher
   number_counter
