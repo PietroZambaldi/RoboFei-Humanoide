@@ -9,7 +9,7 @@ class NumberPublisher : public rclcpp::Node
 {
 public:
   NumberPublisher()
-  : Node("number_publisher"), number_to_publish_(2)  // número base que será publicado
+  : Node("number_publisher"), number_to_publish_(2) 
   {
     publisher_ = this->create_publisher<example_interfaces::msg::Int64>("/number", 10);
     timer_ = this->create_wall_timer(1s, std::bind(&NumberPublisher::timer_callback, this));
